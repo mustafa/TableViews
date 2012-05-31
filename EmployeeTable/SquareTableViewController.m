@@ -8,6 +8,7 @@
 
 #import "SquareTableViewController.h"
 #import "SquareEmployee.h"
+#import "SquareDetailsViewController.h"
 
 @interface SquareTableViewController ()
 
@@ -84,7 +85,6 @@
     SquareEmployee *employee = [dataSource objectAtIndex:[indexPath row]];
     
     [[cell textLabel] setText:[employee name]];
-    [[cell detailTextLabel] setText:[[employee dateOfBirth] descriptionWithLocale:[NSLocale currentLocale]]];
     [[cell imageView] setImage:[employee profilePicture]];
     return cell;
 }
@@ -139,6 +139,19 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"EmployeeToDetail"])
+    {
+       SquareDetailsViewController *detailViewController = [segue destinationViewController];
+       NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
+       SquareEmployee* employee = [dataSource objectAtIndex:[indexPath row]];
+       [detailViewController setEmployee:employee];
+       
+        
+    }
 }
 
 @end

@@ -11,5 +11,4 @@
 @interface SquareTableViewController : UITableViewController
 
 @property (nonatomic,strong) NSArray* dataSource;
-
 @end

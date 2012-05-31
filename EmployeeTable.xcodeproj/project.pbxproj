@@ -24,6 +24,7 @@
 		6D80900D1577E0CD00B976E7 /* SquareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D80900C1577E0CD00B976E7 /* SquareTableViewController.m */; };
 		6D8090101577E13E00B976E7 /* SquareEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D80900F1577E13E00B976E7 /* SquareEmployee.m */; };
 		6D8090131577F93500B976E7 /* steve.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8090121577F93500B976E7 /* steve.jpeg */; };
+		6D80901F15780F9700B976E7 /* SquareDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D80901E15780F9700B976E7 /* SquareDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6D80900E1577E13E00B976E7 /* SquareEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareEmployee.h; sourceTree = "<group>"; };
 		6D80900F1577E13E00B976E7 /* SquareEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareEmployee.m; sourceTree = "<group>"; };
 		6D8090121577F93500B976E7 /* steve.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = steve.jpeg; path = Images/steve.jpeg; sourceTree = "<group>"; };
+		6D80901D15780F9700B976E7 /* SquareDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDetailsViewController.h; sourceTree = "<group>"; };
+		6D80901E15780F9700B976E7 /* SquareDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				6D808FE21577DB2400B976E7 /* SquareAppDelegate.h */,
 				6D808FE31577DB2500B976E7 /* SquareAppDelegate.m */,
 				6D808FE51577DB2500B976E7 /* MainStoryboard_iPhone.storyboard */,
+				6D80901D15780F9700B976E7 /* SquareDetailsViewController.h */,
+				6D80901E15780F9700B976E7 /* SquareDetailsViewController.m */,
 				6D80900B1577E0CD00B976E7 /* SquareTableViewController.h */,
 				6D80900C1577E0CD00B976E7 /* SquareTableViewController.m */,
 				6D808FE81577DB2500B976E7 /* MainStoryboard_iPad.storyboard */,
@@ -289,6 +294,7 @@
 				6D808FED1577DB2500B976E7 /* SquareViewController.m in Sources */,
 				6D80900D1577E0CD00B976E7 /* SquareTableViewController.m in Sources */,
 				6D8090101577E13E00B976E7 /* SquareEmployee.m in Sources */,
+				6D80901F15780F9700B976E7 /* SquareDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
