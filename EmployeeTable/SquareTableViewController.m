@@ -30,7 +30,12 @@
 {
     [super viewDidLoad];
     
-    SquareEmployee* employee1 = [[SquareEmployee alloc] initWithName:@"Mustafa" jobTitle:@"Sr.Engineer" dateOfBirth:[NSDate date]  numberOfYears:2];
+    UIImage *picture = [UIImage imageNamed:@"steve.jpeg"];
+    SquareEmployee* employee1 = [[SquareEmployee alloc] initWithName:@"Mustafa" 
+                                                            jobTitle:@"Sr.Engineer" 
+                                                         dateOfBirth:[NSDate date]  
+                                                       numberOfYears:2 
+                                                      profilePicture:picture];
     
     NSArray* employees = [NSArray arrayWithObjects:employee1, nil];
     
@@ -79,8 +84,8 @@
     SquareEmployee *employee = [dataSource objectAtIndex:[indexPath row]];
     
     [[cell textLabel] setText:[employee name]];
-    // Configure the cell...
-    
+    [[cell detailTextLabel] setText:[[employee dateOfBirth] descriptionWithLocale:[NSLocale currentLocale]]];
+    [[cell imageView] setImage:[employee profilePicture]];
     return cell;
 }
 

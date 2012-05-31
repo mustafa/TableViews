@@ -23,6 +23,7 @@
 		6D8090021577DB2500B976E7 /* EmployeeTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8090011577DB2500B976E7 /* EmployeeTableTests.m */; };
 		6D80900D1577E0CD00B976E7 /* SquareTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D80900C1577E0CD00B976E7 /* SquareTableViewController.m */; };
 		6D8090101577E13E00B976E7 /* SquareEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D80900F1577E13E00B976E7 /* SquareEmployee.m */; };
+		6D8090131577F93500B976E7 /* steve.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8090121577F93500B976E7 /* steve.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		6D80900C1577E0CD00B976E7 /* SquareTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewController.m; sourceTree = "<group>"; };
 		6D80900E1577E13E00B976E7 /* SquareEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareEmployee.h; sourceTree = "<group>"; };
 		6D80900F1577E13E00B976E7 /* SquareEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareEmployee.m; sourceTree = "<group>"; };
+		6D8090121577F93500B976E7 /* steve.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = steve.jpeg; path = Images/steve.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		6D808FD91577DB2400B976E7 /* EmployeeTable */ = {
 			isa = PBXGroup;
 			children = (
+				6D8090111577F92200B976E7 /* Images */,
 				6D808FE21577DB2400B976E7 /* SquareAppDelegate.h */,
 				6D808FE31577DB2500B976E7 /* SquareAppDelegate.m */,
 				6D808FE51577DB2500B976E7 /* MainStoryboard_iPhone.storyboard */,
@@ -162,6 +165,14 @@
 				6D808FFD1577DB2500B976E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D8090111577F92200B976E7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6D8090121577F93500B976E7 /* steve.jpeg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				6D808FDE1577DB2400B976E7 /* InfoPlist.strings in Resources */,
 				6D808FE71577DB2500B976E7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6D808FEA1577DB2500B976E7 /* MainStoryboard_iPad.storyboard in Resources */,
+				6D8090131577F93500B976E7 /* steve.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

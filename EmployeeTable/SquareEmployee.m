@@ -14,11 +14,12 @@
 @synthesize jobTitle = _jobTitle;
 @synthesize dateOfBirth = _dateOfBirth;
 @synthesize numberOfYears = _numberOfYears;
+@synthesize profilePicture = _profilePicture;
 
 
 // Designated initializer
 
-- (id)initWithName:(NSString*) name jobTitle:(NSString*)jobTitle dateOfBirth:(NSDate*)dob numberOfYears:(NSInteger)years
+- (id)initWithName:(NSString*) name jobTitle:(NSString*)jobTitle dateOfBirth:(NSDate*)dob numberOfYears:(NSInteger)years profilePicture:(UIImage*)picture
 {
     if(self = [super init])
     {
@@ -26,6 +27,7 @@
         [self setJobTitle:jobTitle];
         [self setDateOfBirth:dob];
         [self setNumberOfYears:years];
+        [self setProfilePicture:picture];
     }
     return self;
 }

@@ -13,9 +13,10 @@
 @property (nonatomic,copy) NSString* jobTitle;
 @property (nonatomic, strong) NSDate* dateOfBirth;
 @property (nonatomic, assign) NSInteger numberOfYears;
+@property (nonatomic, strong) UIImage* profilePicture;
 
 
 // designated initializer
-- (id)initWithName:(NSString*) name jobTitle:(NSString*)jobTitle dateOfBirth:(NSDate*)dob numberOfYears:(NSInteger)years;
+- (id)initWithName:(NSString*) name jobTitle:(NSString*)jobTitle dateOfBirth:(NSDate*)dob numberOfYears:(NSInteger)years profilePicture:(UIImage*)picture;
 
 @end
