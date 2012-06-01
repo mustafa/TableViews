@@ -15,7 +15,6 @@
 		6D808FE41577DB2500B976E7 /* SquareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D808FE31577DB2500B976E7 /* SquareAppDelegate.m */; };
 		6D808FE71577DB2500B976E7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D808FE51577DB2500B976E7 /* MainStoryboard_iPhone.storyboard */; };
 		6D808FEA1577DB2500B976E7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D808FE81577DB2500B976E7 /* MainStoryboard_iPad.storyboard */; };
-		6D808FED1577DB2500B976E7 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D808FEC1577DB2500B976E7 /* SquareViewController.m */; };
 		6D808FF51577DB2500B976E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D808FF41577DB2500B976E7 /* SenTestingKit.framework */; };
 		6D808FF61577DB2500B976E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D808FD31577DB2400B976E7 /* UIKit.framework */; };
 		6D808FF71577DB2500B976E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D808FD51577DB2400B976E7 /* Foundation.framework */; };
@@ -50,8 +49,6 @@
 		6D808FE31577DB2500B976E7 /* SquareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareAppDelegate.m; sourceTree = "<group>"; };
 		6D808FE61577DB2500B976E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6D808FE91577DB2500B976E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		6D808FEB1577DB2500B976E7 /* SquareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
-		6D808FEC1577DB2500B976E7 /* SquareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
 		6D808FF31577DB2500B976E7 /* EmployeeTableTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeTableTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D808FF41577DB2500B976E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6D808FFC1577DB2500B976E7 /* EmployeeTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmployeeTableTests-Info.plist"; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				6D80900B1577E0CD00B976E7 /* SquareTableViewController.h */,
 				6D80900C1577E0CD00B976E7 /* SquareTableViewController.m */,
 				6D808FE81577DB2500B976E7 /* MainStoryboard_iPad.storyboard */,
-				6D808FEB1577DB2500B976E7 /* SquareViewController.h */,
-				6D808FEC1577DB2500B976E7 /* SquareViewController.m */,
 				6D808FDA1577DB2400B976E7 /* Supporting Files */,
 				6D80900E1577E13E00B976E7 /* SquareEmployee.h */,
 				6D80900F1577E13E00B976E7 /* SquareEmployee.m */,
@@ -291,7 +286,6 @@
 			files = (
 				6D808FE01577DB2400B976E7 /* main.m in Sources */,
 				6D808FE41577DB2500B976E7 /* SquareAppDelegate.m in Sources */,
-				6D808FED1577DB2500B976E7 /* SquareViewController.m in Sources */,
 				6D80900D1577E0CD00B976E7 /* SquareTableViewController.m in Sources */,
 				6D8090101577E13E00B976E7 /* SquareEmployee.m in Sources */,
 				6D80901F15780F9700B976E7 /* SquareDetailsViewController.m in Sources */,
@@ -474,6 +468,7 @@
 				6D8090071577DB2500B976E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D8090081577DB2500B976E7 /* Build configuration list for PBXNativeTarget "EmployeeTableTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +477,7 @@
 				6D80900A1577DB2500B976E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,7 +16,7 @@
 
 @implementation SquareTableViewController
 
-@synthesize dataSource;
+@synthesize dataSource = _dataSource;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,23 +32,36 @@
     [super viewDidLoad];
     
     UIImage *picture = [UIImage imageNamed:@"steve.jpeg"];
-    SquareEmployee* employee1 = [[SquareEmployee alloc] initWithName:@"Mustafa" 
-                                                            jobTitle:@"Sr.Engineer" 
-                                                         dateOfBirth:[NSDate date]  
+    SquareEmployee* employee1 = [[SquareEmployee alloc] initWithName:@"Mark H." 
+                                                            jobTitle:@"CEO" 
+                                                         dateOfBirth:[NSDate dateWithTimeIntervalSince1970:NSTimeIntervalSince1970]  
                                                        numberOfYears:2 
                                                       profilePicture:picture];
     
-    NSArray* employees = [NSArray arrayWithObjects:employee1, nil];
+    SquareEmployee* employee2 = [[SquareEmployee alloc] initWithName:@"John S." 
+                                                            jobTitle:@"Engineer" 
+                                                         dateOfBirth:[NSDate dateWithTimeIntervalSince1970:50000]  
+                                                       numberOfYears:5
+                                                      profilePicture:picture];
+    
+    SquareEmployee* employee3 = [[SquareEmployee alloc] initWithName:@"Bob Ray" 
+                                                            jobTitle:@"Sr. Engineer" 
+                                                         dateOfBirth:[NSDate dateWithTimeIntervalSince1970:2000]  
+                                                       numberOfYears:9
+                                                      profilePicture:picture];
+    
+    SquareEmployee* employee4 = [[SquareEmployee alloc] initWithName:@"Eminem" 
+                                                            jobTitle:@"Engineer" 
+                                                         dateOfBirth:[NSDate dateWithTimeIntervalSince1970:3430000]  
+                                                       numberOfYears:1
+                                                      profilePicture:picture];
+    
+    NSArray* employees = [NSArray arrayWithObjects:employee1,employee2,employee3,employee4, nil];
     
     [self setDataSource:employees];
-    
+        
     [[self tableView] reloadData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -68,65 +81,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [[self dataSource] count];
+    return 1;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [[self dataSource] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EmployeeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    SquareEmployee *employee = [dataSource objectAtIndex:[indexPath row]];
-    
-    [[cell textLabel] setText:[employee name]];
-    [[cell imageView] setImage:[employee profilePicture]];
+    if([self dataSource])
+    {
+        SquareEmployee *employee = [[self dataSource] objectAtIndex:[indexPath row]];
+        [[cell textLabel] setText:[employee name]];
+        [[cell imageView] setImage:[employee profilePicture]];
+    }
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -147,7 +125,7 @@
     {
        SquareDetailsViewController *detailViewController = [segue destinationViewController];
        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
-       SquareEmployee* employee = [dataSource objectAtIndex:[indexPath row]];
+        SquareEmployee* employee = [[self dataSource] objectAtIndex:[indexPath row]];
        [detailViewController setEmployee:employee];
        
         

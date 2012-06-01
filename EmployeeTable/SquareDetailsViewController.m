@@ -32,13 +32,14 @@
 {
     [super viewDidLoad];
     [[self labelJobTitle] setText:[[self employee] jobTitle]];
+    NSString *numberOfYears = [NSString stringWithFormat:@"%d years",[[self employee] numberOfYears]];
+    [[self labelNumberOfYears] setText:numberOfYears];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    NSString *numberOfYears = [NSString stringWithFormat:@"%d years",[[self employee] numberOfYears]];
-    [[self labelNumberOfYears] setText:numberOfYears];
     NSString* dateOfBirth = [dateFormatter stringFromDate:[[self employee] dateOfBirth]];
     [[self lableDateOfBirth] setText:dateOfBirth];
+    [[self navigationItem] setTitle:[[self employee] name]];
 }
 
 - (void)viewDidUnload
@@ -47,8 +48,6 @@
     [self setLableDateOfBirth:nil];
     [self setLabelNumberOfYears:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
